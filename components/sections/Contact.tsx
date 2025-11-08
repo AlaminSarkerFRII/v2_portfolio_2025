@@ -3,7 +3,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Mail } from 'lucide-react';
+import { Mail, Download } from 'lucide-react';
+import { resumePath } from '@/lib/data';
 
 export default function Contact() {
   const ref = useRef(null);
@@ -51,16 +52,26 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.5 }}
-            className="mt-10"
+            className="mt-10 flex flex-wrap gap-4 justify-center"
           >
             <motion.a
-              href="mailto:your.email@example.com"
+              href="mailto:alamin.sarker4241@gmail.com"
               className="inline-flex items-center gap-2 px-8 py-4 border border-[#64ffda] text-[#64ffda] rounded font-mono text-sm hover:bg-[#64ffda]/10 transition-colors"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
               <Mail size={18} />
               Say Hello
+            </motion.a>
+            <motion.a
+              href={resumePath}
+              download
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#64ffda]/10 border border-[#64ffda] text-[#64ffda] rounded font-mono text-sm hover:bg-[#64ffda]/20 transition-colors"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Download size={18} />
+              Download Resume
             </motion.a>
           </motion.div>
         </motion.div>

@@ -11,14 +11,16 @@ export default function About() {
   const skills = [
     'JavaScript (ES6+)',
     'TypeScript',
-    'React',
+    'React.js',
     'Next.js',
-    'Node.js',
     'Python',
-    'Tailwind CSS',
-    'PostgreSQL',
+    'Django',
+    'Zustand',
+    'TanstackQuery',
+    'TailwindCSS',
+    'Docker',
+    'MySQL',
     'MongoDB',
-    'Git',
   ];
 
   return (
@@ -49,14 +51,15 @@ export default function About() {
         >
           <div className="space-y-4 text-[#8892b0]">
             <p>
-              Hello! I'm a software engineer based in San Francisco, CA. I enjoy creating
-              things that live on the internet, whether that be websites, applications, or
-              anything in between.
+              Hello! I'm Alamin, a Frontend Focused Software Engineer based in Dhaka, Bangladesh. 
+              I enjoy creating scalable, functional, and pixel-perfect applications that live on 
+              the internet, whether that be websites, SaaS platforms, or anything in between.
             </p>
             <p>
-              My goal is to always build products that provide pixel-perfect, performant
-              experiences. I'm passionate about writing clean, maintainable code and
-              following best practices.
+              My goal is to always build products that provide pixel-perfect, performant experiences. 
+              I'm passionate about writing clean, maintainable code, optimizing performance, and 
+              following best practices. I've successfully improved application load times by up to 40% 
+              and enhanced user engagement through efficient code-splitting and caching strategies.
             </p>
             <p>
               Here are a few technologies I've been working with recently:

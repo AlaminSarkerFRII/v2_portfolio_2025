@@ -23,7 +23,7 @@ export default function Footer() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Designed & Built by Your Name
+            Designed & Built by Alamin Sarker
           </motion.a>
           <p className="text-[#8892b0] text-sm font-mono">
             © {currentYear} All rights reserved.

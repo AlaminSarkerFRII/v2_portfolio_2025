@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Developer",
-  description: "Portfolio website showcasing projects and experience",
+  title: "Alamin Sarker | Software Engineer",
+  description: "Frontend Focused Software Engineer with 3+ years of expertise in developing scalable, functional, and pixel-perfect frontend applications",
 };
 
 export default function RootLayout({

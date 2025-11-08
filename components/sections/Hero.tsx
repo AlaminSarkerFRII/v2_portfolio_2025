@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Download } from 'lucide-react';
+import { resumePath } from '@/lib/data';
 
 export default function Hero() {
   const scrollToAbout = () => {
@@ -35,7 +36,7 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="text-5xl md:text-7xl font-bold text-[#ccd6f6]"
           >
-            Your Name.
+            Alamin Sarker.
           </motion.h1>
           
           <motion.h2
@@ -44,7 +45,7 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
             className="text-4xl md:text-6xl font-bold text-[#8892b0]"
           >
-            I build things for the web.
+            I build scalable web applications.
           </motion.h2>
           
           <motion.p
@@ -53,24 +54,35 @@ export default function Hero() {
             transition={{ delay: 0.5 }}
             className="max-w-2xl text-[#8892b0] text-lg leading-relaxed mt-6"
           >
-            I'm a software engineer specializing in building (and occasionally designing)
-            exceptional digital experiences. Currently, I'm focused on building accessible,
-            human-centered products.
+            I'm a Frontend Focused Software Engineer with 3+ years of expertise in developing scalable, 
+            functional, and pixel-perfect frontend applications using ReactJS, NextJS, TypeScript/JavaScript, 
+            and State management. Proficient in Python, Docker-based deployments, and actively seeking 
+            opportunities to contribute to innovative projects.
           </motion.p>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="mt-10"
+            className="mt-10 flex flex-wrap gap-4"
           >
             <motion.a
               href="#projects"
-              className="inline-block px-8 py-4 border border-[#64ffda] text-[#64ffda] rounded font-mono text-sm hover:bg-[#64ffda]/10 transition-colors"
+              className="inline-flex items-center px-8 py-4 border border-[#64ffda] text-[#64ffda] rounded font-mono text-sm hover:bg-[#64ffda]/10 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Check out my work!
+            </motion.a>
+            <motion.a
+              href={resumePath}
+              download
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#64ffda]/10 border border-[#64ffda] text-[#64ffda] rounded font-mono text-sm hover:bg-[#64ffda]/20 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Download size={18} />
+              Download Resume
             </motion.a>
           </motion.div>
         </motion.div>

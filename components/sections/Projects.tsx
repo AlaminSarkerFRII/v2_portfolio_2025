@@ -25,7 +25,7 @@ export default function Projects() {
             transition={{ delay: 0.2 }}
             className="text-3xl font-bold text-[#ccd6f6] font-mono whitespace-nowrap"
           >
-            <span className="text-[#64ffda]">03.</span> Some Things I've Built
+            <span className="text-[#64ffda]">03.</span> Some Things I&apos;ve Built
           </motion.h2>
           <div className="h-px bg-[#233554] mt-3 hidden md:block"></div>
         </motion.div>
@@ -52,30 +52,32 @@ export default function Projects() {
                 <div className="relative bg-[#112240] rounded-lg p-6 border border-[#233554] hover:border-[#64ffda]/50 transition-colors">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-2xl font-bold text-[#ccd6f6]">{project.title}</h3>
-                    <div className="flex gap-4">
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[#8892b0] hover:text-[#64ffda] transition-colors"
-                          aria-label="GitHub"
-                        >
-                          <Github size={20} />
-                        </a>
-                      )}
-                      {project.external && (
-                        <a
-                          href={project.external}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[#8892b0] hover:text-[#64ffda] transition-colors"
-                          aria-label="External Link"
-                        >
-                          <ExternalLink size={20} />
-                        </a>
-                      )}
-                    </div>
+                    {(project.github || project.external) && (
+                      <div className="flex gap-4">
+                        {project.github && (
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#8892b0] hover:text-[#64ffda] transition-colors"
+                            aria-label="GitHub"
+                          >
+                            <Github size={20} />
+                          </a>
+                        )}
+                        {project.external && (
+                          <a
+                            href={project.external}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#8892b0] hover:text-[#64ffda] transition-colors"
+                            aria-label="External Link"
+                          >
+                            <ExternalLink size={20} />
+                          </a>
+                        )}
+                      </div>
+                    )}
                   </div>
                   <p className="text-[#8892b0] mb-4 leading-relaxed">
                     {project.description}

@@ -7,38 +7,42 @@ export const navLinks = [
   { name: 'Contact', href: '#contact' },
 ];
 
+// Resume file path - update this if you rename your resume file
+export const resumePath = '/Alamin-Sarker-Software-Engineer(Frontend-3+-YOE).pdf';
+
 export const socialLinks: SocialLink[] = [
   { name: 'GitHub', url: 'https://github.com', icon: 'github' },
   { name: 'LinkedIn', url: 'https://linkedin.com', icon: 'linkedin' },
-  { name: 'Twitter', url: 'https://twitter.com', icon: 'twitter' },
-  { name: 'Email', url: 'mailto:your.email@example.com', icon: 'mail' },
+  { name: 'Email', url: 'mailto:alamin.sarker4241@gmail.com', icon: 'mail' },
 ];
 
 export const experiences: Experience[] = [
   {
     id: '1',
-    company: 'Company Name',
-    position: 'Senior Software Engineer',
-    location: 'San Francisco, CA',
-    range: '2022 - Present',
-    url: 'https://example.com',
+    company: 'Technometrics Limited',
+    position: 'Software Engineer',
+    location: 'Banani, Dhaka, Bangladesh',
+    range: 'Apr 2024 - May 2025',
+    url: 'https://technometrics.com',
     descriptions: [
-      'Led development of scalable web applications using React and Node.js',
-      'Mentored junior developers and conducted code reviews',
-      'Improved application performance by 40% through optimization techniques',
+      'Developed and maintained scalable backend systems for multiple projects, including Social Media Monitoring, BGB E-Recruitment (1M+ users), and Speechlytics, serving 60k+ users',
+      'Optimized frontend performance and backend API efficiency, improving usability and load times by 40% via code-splitting, lazy loading, and Tanstack Query caching',
+      'Containerized applications with Docker and managed multi-service architectures, contributing to CI/CD workflows and seamless deployments',
+      'Collaborated with cross-functional teams to define technical requirements, system design, and implement modular design, code reusability, and automated testing',
     ],
   },
   {
     id: '2',
-    company: 'Previous Company',
-    position: 'Software Engineer',
-    location: 'Remote',
-    range: '2020 - 2022',
-    url: 'https://example.com',
+    company: 'Top IT Limited',
+    position: 'Full-Stack Developer',
+    location: 'Mohammadpur, Dhaka, Bangladesh',
+    range: 'Jun 2022 - Nov 2022',
+    url: 'https://topit.com',
     descriptions: [
-      'Developed and maintained multiple client-facing applications',
-      'Collaborated with cross-functional teams to deliver high-quality products',
-      'Implemented new features and fixed bugs in existing codebase',
+      'Designed and developed a high-performance SaaS platform for offer management, cutting load time by 40% and improving UX for 20K+ monthly users',
+      'Built full-stack features with Next.js, Express.js, and MongoDB, ensuring a modular, scalable architecture',
+      'Integrated RBAC authentication system for secure access control',
+      'Worked closely with designers to deliver responsive, pixel-perfect UIs, improving mobile engagement by 25%',
     ],
   },
 ];
@@ -46,35 +50,27 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Project One',
-    description: 'A modern web application built with Next.js and TypeScript. Features include authentication, real-time updates, and a responsive design.',
-    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL'],
-    github: 'https://github.com',
-    external: 'https://example.com',
+    title: 'Social Media Monitoring (SMM)',
+    description: 'Private project for NTMC and CTTC Branch in Bangladesh. Led the frontend development using React, Zustand, and Ant Design for real-time social media analytics dashboards. Built RBAC and user auth using Django and PostgreSQL. Optimized frontend performance and backend API efficiency, improving usability & load times by 30%. Integrated NLP/topic modeling APIs for sentiment analysis and content classification.',
+    tech: ['React', 'Zustand', 'Django', 'PostgreSQL', 'NLP', 'Docker', 'Nginx'],
+    github: '',
+    external: '',
   },
   {
     id: '2',
-    title: 'Project Two',
-    description: 'A mobile-first e-commerce platform with advanced filtering and search capabilities. Built with React and integrated with payment gateways.',
-    tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    github: 'https://github.com',
-    external: 'https://example.com',
+    title: 'BGB E-Recruitment',
+    description: 'Developed a live recruitment platform with job applications, admit cards, and exam center features serving 1M+ users. Improved onboarding process by 25% with responsive UI & optimized workflows. Built applicant management and education verification APIs in Django. Deployed with Docker for scalable production system.',
+    tech: ['React', 'Redux Toolkit', 'Django', 'MySQL', 'Docker'],
+    github: '',
+    external: '',
   },
   {
     id: '3',
-    title: 'Project Three',
-    description: 'An open-source dashboard for monitoring system metrics and analytics. Features real-time data visualization and customizable widgets.',
-    tech: ['Vue.js', 'D3.js', 'Express', 'Redis'],
-    github: 'https://github.com',
-    external: 'https://example.com',
-  },
-  {
-    id: '4',
-    title: 'Project Four',
-    description: 'A collaborative task management tool with drag-and-drop functionality. Supports team collaboration and project tracking.',
-    tech: ['React', 'TypeScript', 'GraphQL', 'Socket.io'],
-    github: 'https://github.com',
-    external: 'https://example.com',
+    title: 'Top Client Offer',
+    description: 'Led a team of 4 developers to deliver this SaaS project. Developed full-stack features using Next.js, Node.js, Express.js, and MongoDB, ensuring clean architecture and performance with RBAC System. Cut load time by 40% and improved UX for 20K+ monthly users. Collaborated with UI/UX designers to implement responsive, pixel-perfect interfaces across devices.',
+    tech: ['Next.js', 'Node.js', 'Express.js', 'MongoDB', 'RBAC'],
+    github: '',
+    external: '',
   },
 ];
 

@@ -27,7 +27,7 @@ export default function EmailSidebar() {
       className="fixed right-8 bottom-0 hidden lg:flex flex-col items-center space-y-6 z-40"
     >
       <motion.a
-        href="mailto:your.email@example.com"
+        href="mailto:alamin.sarker4241@gmail.com"
         className="writing-vertical text-[#8892b0] hover:text-[#64ffda] transition-colors font-mono text-sm tracking-wider"
         style={{ writingMode: 'vertical-rl' }}
         whileHover={{ y: -3 }}
@@ -35,7 +35,7 @@ export default function EmailSidebar() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        your.email@example.com
+        alamin.sarker4241@gmail.com
       </motion.a>
 
       {/* Vertical Line */}
