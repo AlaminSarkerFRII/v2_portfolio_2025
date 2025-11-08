@@ -1,36 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
+
+A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. Inspired by Brittany Chiang's portfolio design with smooth animations and a beautiful dark theme.
+
+## Features
+
+- 🎨 **Modern Design**: Dark theme with green accents inspired by Brittany Chiang's portfolio
+- 🚀 **Next.js 15**: Built with the latest Next.js features including App Router
+- 💅 **Tailwind CSS**: Styled with Tailwind CSS for rapid UI development
+- ✨ **Animations**: Smooth animations powered by Framer Motion
+- 📱 **Responsive**: Fully responsive design that works on all devices
+- ♿ **Accessible**: Built with accessibility in mind
+- 🎯 **TypeScript**: Full TypeScript support for type safety
+
+## Sections
+
+- **Hero**: Introduction section with animated text
+- **About**: Personal information and skills
+- **Experience**: Work experience with interactive tabs
+- **Projects**: Showcase of projects with hover effects
+- **Contact**: Contact information and call-to-action
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ installed
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd v2_portfolio_2025
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Update Personal Information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Edit `lib/data.ts` to update:
+   - Navigation links
+   - Social media links
+   - Work experience
+   - Projects
+   - Skills
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Update `components/sections/Hero.tsx` to change:
+   - Your name
+   - Introduction text
+   - Call-to-action button
 
-## Deploy on Vercel
+3. Update `components/layout/Footer.tsx` to change:
+   - Footer text
+   - Copyright information
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Colors
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The color scheme is defined in `app/globals.css`. You can customize:
+- `--background`: Main background color
+- `--foreground`: Main text color
+- `--green`: Accent color (green)
+- `--slate`: Secondary text color
+
+### Fonts
+
+The project uses Geist Sans and Geist Mono fonts from Next.js. You can change them in `app/layout.tsx`.
+
+## Project Structure
+
+```
+v2_portfolio_2025/
+├── app/
+│   ├── globals.css       # Global styles and CSS variables
+│   ├── layout.tsx        # Root layout
+│   └── page.tsx          # Home page
+├── components/
+│   ├── layout/           # Layout components
+│   │   ├── Navbar.tsx
+│   │   ├── Sidebar.tsx
+│   │   ├── EmailSidebar.tsx
+│   │   └── Footer.tsx
+│   └── sections/         # Page sections
+│       ├── Hero.tsx
+│       ├── About.tsx
+│       ├── Experience.tsx
+│       ├── Projects.tsx
+│       └── Contact.tsx
+├── lib/
+│   ├── types.ts          # TypeScript types
+│   └── data.ts           # Data for portfolio content
+└── public/               # Static assets
+```
+
+## Deployment
+
+### Vercel (Recommended)
+
+The easiest way to deploy is using [Vercel](https://vercel.com):
+
+1. Push your code to GitHub
+2. Import your repository in Vercel
+3. Vercel will automatically detect Next.js and configure the build settings
+4. Your site will be deployed!
+
+### Other Platforms
+
+You can also deploy to other platforms that support Next.js:
+- Netlify
+- AWS Amplify
+- Cloudflare Pages
+- Any Node.js hosting platform
+
+## Technologies Used
+
+- **Next.js 15**: React framework for production
+- **TypeScript**: Type-safe JavaScript
+- **Tailwind CSS**: Utility-first CSS framework
+- **Framer Motion**: Animation library for React
+- **Lucide React**: Beautiful icon library
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Credits
+
+Design inspired by [Brittany Chiang's Portfolio](https://v4.brittanychiang.com/)
+
+## Support
+
+If you have any questions or need help, please open an issue on GitHub.
