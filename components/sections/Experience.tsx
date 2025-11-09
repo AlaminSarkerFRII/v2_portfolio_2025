@@ -12,7 +12,7 @@ export default function Experience() {
       <div className="max-w-5xl mx-auto w-full">
         <div className="grid md:grid-cols-[auto_1fr] gap-8 items-start mb-12">
           <h2 className="text-3xl font-bold text-[#ccd6f6] font-mono whitespace-nowrap">
-            <span className="text-[#64ffda]">02.</span> Where I've Worked
+            <span className="text-[#64ffda]">02.</span> Where I&apos;ve Worked
           </h2>
           <div className="h-px bg-[#233554] mt-3 hidden md:block"></div>
         </div>
@@ -28,7 +28,7 @@ export default function Experience() {
                   activeTab === index
                     ? 'border-[#64ffda] text-[#64ffda] bg-[#112240]/50'
                     : 'border-transparent text-[#8892b0] hover:text-[#64ffda] hover:bg-[#112240]/30'
-                }`}
+                } ${index > 0 ? 'md:mt-4' : ''}`}
               >
                 {exp.company}
               </button>

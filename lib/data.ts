@@ -26,9 +26,10 @@ export const experiences: Experience[] = [
     url: 'https://technometrics.com',
     descriptions: [
       'Developed and maintained scalable backend systems for multiple projects, including Social Media Monitoring, BGB E-Recruitment (1M+ users), and Speechlytics, serving 60k+ users',
-      'Optimized frontend performance and backend API efficiency, improving usability and load times by 40% via code-splitting, lazy loading, and Tanstack Query caching',
+      'Optimized frontend performance and backend API efficiency, improving usability',
+      'Improved frontend load speed by 40% via code-splitting, lazy loading, and Tanstack Query caching, boosting user engagement',
       'Containerized applications with Docker and managed multi-service architectures, contributing to CI/CD workflows and seamless deployments',
-      'Collaborated with cross-functional teams to define technical requirements, system design, and implement modular design, code reusability, and automated testing',
+      'Collaborated with cross-functional teams to define technical requirements, system design, and implement modular design, code reusability, and automated testing, enhancing overall project efficiency',
     ],
   },
   {
