@@ -152,8 +152,8 @@ Edit `app/layout.tsx`:
    - Automatic deployment
 
 2. **Other Platforms**:
-   - Build: `npm run build`
-   - Start: `npm start`
+   - Build: `pnpm run build`
+   - Start: `pnpm start`
    - Deploy the `.next` folder and dependencies
 
 ## Tips

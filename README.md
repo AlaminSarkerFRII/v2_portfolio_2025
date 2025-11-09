@@ -25,7 +25,7 @@ A modern, responsive portfolio website built with Next.js 15, TypeScript, and Ta
 ### Prerequisites
 
 - Node.js 18+ installed
-- npm or yarn package manager
+- pnpm package manager (install with `npm install -g pnpm`)
 
 ### Installation
 
@@ -37,12 +37,12 @@ cd v2_portfolio_2025
 
 2. Install dependencies:
 ```bash
-npm install
+pnpm install
 ```
 
 3. Run the development server:
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.

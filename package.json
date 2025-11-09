@@ -2,6 +2,7 @@
   "name": "v2_portfolio_2025",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@9.0.0",
   "scripts": {
     "dev": "next dev",
     "dev:webpack": "NEXT_PRIVATE_SKIP_TURBO=1 next dev",
