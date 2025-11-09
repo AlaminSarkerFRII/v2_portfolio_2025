@@ -49,7 +49,7 @@ export default function About() {
               and enhanced user engagement through efficient code-splitting and caching strategies.
             </p>
             <p>
-              Here are a few technologies I've been working with recently:
+              Here are a few technologies I&apos;ve been working with recently:
             </p>
           </div>
 
