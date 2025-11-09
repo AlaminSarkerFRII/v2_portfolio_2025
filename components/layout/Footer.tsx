@@ -13,7 +13,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="text-[#64ffda] hover:text-[#64ffda]/80 font-mono text-sm transition-colors hover:scale-105 active:scale-95"
           >
-            Designed & Built by Alamin Sarker
+            Designed & Built by Brittany Chiang
           </a>
           <p className="text-[#8892b0] text-sm font-mono">
             © {currentYear} All rights reserved.

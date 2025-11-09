@@ -37,7 +37,7 @@ export default function Sidebar() {
       className="fixed left-8 bottom-0 hidden lg:flex flex-col items-center space-y-6 z-40"
     >
       {/* Social Links */}
-      <div className="flex flex-col space-y-4">
+      <div className="flex flex-col gap-8 space-y-4">
         {socialLinks.map((link, index) => {
           const Icon = iconMap[link.icon.toLowerCase()];
           return (

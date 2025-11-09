@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import profileImage from "@/app/assets/my_image.jpg";
 
@@ -11,6 +12,7 @@ export default function About() {
   const skills = [
     "JavaScript (ES6+)",
     "TypeScript",
+    "Node.js",
     "React.js",
     "Next.js",
     "Python",
@@ -21,6 +23,8 @@ export default function About() {
     "Docker",
     "MySQL",
     "MongoDB",
+    "Selenium",
+    "Pytest",
   ];
 
   return (
@@ -30,14 +34,26 @@ export default function About() {
       className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20"
     >
       <div className="max-w-4xl mx-auto">
-        <div className="grid md:grid-cols-[auto_1fr] gap-8 items-start">
+        <motion.div 
+          className="grid md:grid-cols-[auto_1fr] gap-8 items-start"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <h2 className="text-3xl font-bold text-[#ccd6f6] font-mono whitespace-nowrap">
             <span className="text-[#64ffda]">01.</span> About Me
           </h2>
           <div className="h-px bg-[#233554] mt-3 hidden md:block"></div>
-        </div>
+        </motion.div>
 
-        <div className="mt-12 grid md:grid-cols-2 gap-8">
+        <motion.div 
+          className="mt-12 grid md:grid-cols-2 gap-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
           <div className="flex flex-col items-center md:items-start gap-6">
             <div className="space-y-4 text-[#8892b0]">
               <p>
@@ -81,7 +97,13 @@ export default function About() {
           </div>
 
           {/* Profile Image */}
-          <div className="relative w-64 h-64 md:w-72 md:h-72 group">
+          <motion.div 
+            className="relative w-64 h-64 md:w-72 md:h-72 group"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             <div className="absolute inset-0 border-2 border-[#64ffda] rounded-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300 transform translate-x-4 translate-y-4"></div>
 
             <div className="relative w-full h-full rounded-lg overflow-hidden border-2 border-[#64ffda]/30">
@@ -93,8 +115,8 @@ export default function About() {
                 sizes="(max-width: 768px) 256px, 288px"
               />
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

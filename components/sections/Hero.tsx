@@ -17,27 +17,57 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 lg:px-12 pt-16 relative">
       <div className="max-w-4xl mx-auto">
-        <div className="space-y-4">
-          <p className="text-[#64ffda] font-mono text-lg">
+        <motion.div 
+          className="space-y-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
+          <motion.p 
+            className="text-[#64ffda] font-mono text-lg"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             Hi, my name is
-          </p>
+          </motion.p>
           
-          <h1 className="text-5xl md:text-7xl font-bold text-[#ccd6f6]">
+          <motion.h1 
+            className="text-5xl md:text-7xl font-bold text-[#ccd6f6]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             Alamin Sarker.
-          </h1>
+          </motion.h1>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-[#8892b0]">
+          <motion.h2 
+            className="text-4xl md:text-6xl font-bold text-[#8892b0]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
             I build scalable web applications.
-          </h2>
+          </motion.h2>
           
-          <p className="max-w-2xl text-[#8892b0] text-lg leading-relaxed mt-6">
+          <motion.p 
+            className="max-w-2xl text-[#8892b0] text-lg leading-relaxed mt-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             I&apos;m a Frontend Focused Software Engineer with 3+ years of expertise in developing scalable, 
             functional, and pixel-perfect frontend applications using ReactJS, NextJS, TypeScript/JavaScript, 
             and State management. Proficient in Python, Docker-based deployments, and actively seeking 
             opportunities to contribute to innovative projects.
-          </p>
+          </motion.p>
           
-          <div className="mt-10 flex flex-wrap gap-4">
+          <motion.div 
+            className="mt-10 flex flex-wrap gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
             <a
               href="#projects"
               className="inline-flex items-center px-8 py-4 border border-[#64ffda] text-[#64ffda] rounded font-mono text-sm hover:bg-[#64ffda]/10 transition-colors hover:scale-105 active:scale-95"
@@ -52,8 +82,8 @@ export default function Hero() {
               <Download size={18} />
               Download Resume
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         
         {mounted && (
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 hidden md:block">

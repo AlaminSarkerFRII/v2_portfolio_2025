@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { experiences } from '@/lib/data';
 import { ExternalLink } from 'lucide-react';
 
@@ -10,16 +11,28 @@ export default function Experience() {
   return (
     <section id="experience" className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20">
       <div className="max-w-5xl mx-auto w-full">
-        <div className="grid md:grid-cols-[auto_1fr] gap-8 items-start mb-12">
+        <motion.div 
+          className="grid md:grid-cols-[auto_1fr] gap-8 items-start mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
           <h2 className="text-3xl font-bold text-[#ccd6f6] font-mono whitespace-nowrap">
             <span className="text-[#64ffda]">02.</span> Where I&apos;ve Worked
           </h2>
           <div className="h-px bg-[#233554] mt-3 hidden md:block"></div>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-[200px_1fr] gap-8">
+        <motion.div 
+          className="grid md:grid-cols-[200px_1fr] gap-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
           {/* Tab List */}
-          <div className="flex md:flex-col overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-l border-[#233554]">
+          <div className="flex md:flex-col items-start gap-y-8 overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-l border-[#233554]">
             {experiences.map((exp, index) => (
               <button
                 key={exp.id}
@@ -36,7 +49,13 @@ export default function Experience() {
           </div>
 
           {/* Tab Content */}
-          <div key={activeTab} className="transition-opacity duration-300">
+          <motion.div 
+            key={activeTab} 
+            className="transition-opacity duration-300"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+          >
             {experiences[activeTab] && (
               <div className="space-y-4">
                 <div>
@@ -71,8 +90,8 @@ export default function Experience() {
                 </ul>
               </div>
             )}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

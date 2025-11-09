@@ -1,36 +1,54 @@
-'use client';
+"use client";
 
-import { projects } from '@/lib/data';
-import { ExternalLink, Github } from 'lucide-react';
+import { projects } from "@/lib/data";
+import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <section id="projects" className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20">
+    <section
+      id="projects"
+      className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20"
+    >
       <div className="max-w-6xl mx-auto w-full">
-        <div className="grid md:grid-cols-[auto_1fr] gap-8 items-start mb-12">
+        <motion.div 
+          className="grid md:grid-cols-[auto_1fr] gap-8 items-start mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
           <h2 className="text-3xl font-bold text-[#ccd6f6] font-mono whitespace-nowrap">
-            <span className="text-[#64ffda]">03.</span> Some Things I&apos;ve Built
+            <span className="text-[#64ffda]">03.</span> Some Things I&apos;ve
+            Built
           </h2>
           <div className="h-px bg-[#233554] mt-3 hidden md:block"></div>
-        </div>
+        </motion.div>
 
         <div className="space-y-12">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={project.id}
               className={`grid md:grid-cols-2 gap-8 items-center ${
-                index % 2 === 1 ? 'md:grid-flow-dense' : ''
+                index % 2 === 1 ? "md:grid-flow-dense" : ""
               }`}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
             >
               <div
                 className={`relative group ${
-                  index % 2 === 1 ? 'md:col-start-2' : ''
+                  index % 2 === 1 ? "md:col-start-2" : ""
                 }`}
               >
                 <div className="absolute inset-0 bg-[#64ffda]/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative bg-[#112240] rounded-lg p-6 border border-[#233554] hover:border-[#64ffda]/50 transition-colors group-hover:scale-[1.02]">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-2xl font-bold text-[#ccd6f6]">{project.title}</h3>
+                    <h3 className="text-2xl font-bold text-[#ccd6f6]">
+                      {project.title}
+                    </h3>
                     {(project.github || project.external) && (
                       <div className="flex gap-4">
                         {project.github && (
@@ -74,20 +92,35 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className={`${index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}`}>
-                <div className="bg-[#112240] rounded-lg p-8 border border-[#233554] hover:scale-105 transition-transform">
-                  <div className="aspect-video bg-gradient-to-br from-[#64ffda]/10 to-[#233554] rounded-lg flex items-center justify-center">
-                    <span className="text-[#64ffda] font-mono text-sm">
-                      Project Image
-                    </span>
+              <div
+                className={`${
+                  index % 2 === 1 ? "md:col-start-1 md:row-start-1" : ""
+                }`}
+              >
+                <div className="bg-[#112240] rounded-lg p-2 border border-[#233554] hover:scale-105 transition-transform overflow-hidden">
+                  <div className="aspect-video bg-gradient-to-br from-[#64ffda]/10 to-[#233554] rounded-lg relative overflow-hidden">
+                    {project?.image ? (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover rounded-lg"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <span className="text-[#64ffda] font-mono text-sm">
+                          Project Image
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
   );
 }
-
