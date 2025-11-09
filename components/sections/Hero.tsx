@@ -63,23 +63,23 @@ export default function Hero() {
           </motion.p>
           
           <motion.div 
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-10 flex flex-wrap gap-5"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             <a
               href="#projects"
-              className="inline-flex items-center px-8 py-4 border border-[#64ffda] text-[#64ffda] rounded font-mono text-sm hover:bg-[#64ffda]/10 transition-colors hover:scale-105 active:scale-95"
+              className="inline-flex items-center justify-center px-10 py-5 border-2 border-[#64ffda] text-[#64ffda] rounded font-mono text-base font-semibold hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-[#64ffda]/20 hover:shadow-[#64ffda]/40"
             >
               Check out my work!
             </a>
             <a
               href={resumePath}
               download
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#64ffda]/10 border border-[#64ffda] text-[#64ffda] rounded font-mono text-sm hover:bg-[#64ffda]/20 transition-colors hover:scale-105 active:scale-95"
+              className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-gradient-to-r from-[#64ffda] to-[#52d4c0] text-[#0a192f] rounded font-mono text-base font-semibold border-2 border-[#64ffda] hover:from-[#52d4c0] hover:to-[#64ffda] transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-[#64ffda]/30 hover:shadow-[#64ffda]/50"
             >
-              <Download size={18} />
+              <Download size={20} />
               Download Resume
             </a>
           </motion.div>
