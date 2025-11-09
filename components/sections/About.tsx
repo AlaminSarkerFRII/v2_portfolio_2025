@@ -32,11 +32,12 @@ export default function About() {
       id="about"
       ref={ref}
       className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20"
+      suppressHydrationWarning
     >
       <div className="max-w-4xl mx-auto">
         <motion.div
           className="grid md:grid-cols-[auto_1fr] gap-8 items-start"
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -47,9 +48,9 @@ export default function About() {
           <div className="h-px bg-[#233554] mt-3 hidden md:block"></div>
         </motion.div>
 
-        <motion.div
+        <motion.div 
           className="mt-12 grid md:grid-cols-2 gap-8"
-          initial={{ opacity: 0, y: 30 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -97,9 +98,9 @@ export default function About() {
           </div>
 
           {/* Profile Image */}
-          <motion.div
+          <motion.div 
             className="relative w-64 h-64 md:w-72 md:h-72 group"
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={false}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.4 }}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, startTransition } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
@@ -10,8 +10,14 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Set mounted after initial render to avoid hydration mismatch
+    startTransition(() => {
+      setMounted(true);
+    });
+    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
@@ -50,13 +56,14 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
+          mounted && isScrolled
             ? "bg-[#0a192f]/90 backdrop-blur-md shadow-lg"
             : "bg-transparent"
         }`}
+        suppressHydrationWarning
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex items-center justify-between gap-10 h-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 ">
+          <div className="flex items-center justify-between gap-12 h-16">
             {/* Logo */}
             <Link
               href="/"
@@ -69,7 +76,7 @@ export default function Navbar() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex gap-4 items-center justify-center space-x-8 font-mono text-sm tracking-wide">
               {navLinks.map((link, index) => {
-                const isActive = activeSection === link.href.substring(1);
+                const isActive = mounted && activeSection === link.href.substring(1);
                 return (
                   <a
                     key={link.name}
@@ -80,6 +87,7 @@ export default function Navbar() {
                         ? "text-[#64ffda]"
                         : "text-[#8892b0] hover:text-[#64ffda]"
                     }`}
+                    suppressHydrationWarning
                   >
                     <span className="text-[#64ffda]">0{index + 1}.</span>
                     {link.name}

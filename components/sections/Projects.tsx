@@ -10,11 +10,12 @@ export default function Projects() {
     <section
       id="projects"
       className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20"
+      suppressHydrationWarning
     >
       <div className="max-w-6xl mx-auto w-full">
         <motion.div 
           className="grid md:grid-cols-[auto_1fr] gap-8 items-start mb-12"
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -33,7 +34,7 @@ export default function Projects() {
               className={`grid md:grid-cols-2 gap-8 items-center ${
                 index % 2 === 1 ? "md:grid-flow-dense" : ""
               }`}
-              initial={{ opacity: 0, y: 30 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}

@@ -6,18 +6,18 @@ import { resumePath } from '@/lib/data';
 
 export default function Contact() {
   return (
-    <section id="contact" className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20">
+    <section id="contact" className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20" suppressHydrationWarning>
       <div className="max-w-2xl mx-auto text-center">
         <motion.div 
           className="space-y-6"
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <motion.p 
             className="text-[#64ffda] font-mono text-lg"
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.9 }}
@@ -27,7 +27,7 @@ export default function Contact() {
           
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-[#ccd6f6]"
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 1.0 }}
@@ -37,7 +37,7 @@ export default function Contact() {
           
           <motion.p 
             className="text-[#8892b0] text-lg leading-relaxed max-w-md mx-auto"
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 1.1 }}
@@ -49,7 +49,7 @@ export default function Contact() {
           
           <motion.div 
             className="mt-10 flex flex-wrap gap-4 justify-center"
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 1.2 }}

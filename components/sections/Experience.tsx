@@ -9,11 +9,11 @@ export default function Experience() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section id="experience" className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20">
+    <section id="experience" className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20" suppressHydrationWarning>
       <div className="max-w-5xl mx-auto w-full">
         <motion.div 
           className="grid md:grid-cols-[auto_1fr] gap-8 items-start mb-12"
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -26,7 +26,7 @@ export default function Experience() {
 
         <motion.div 
           className="grid md:grid-cols-[200px_1fr] gap-8"
-          initial={{ opacity: 0, y: 30 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.5 }}
@@ -52,7 +52,7 @@ export default function Experience() {
           <motion.div 
             key={activeTab} 
             className="transition-opacity duration-300"
-            initial={{ opacity: 0, x: 20 }}
+            initial={false}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
           >
