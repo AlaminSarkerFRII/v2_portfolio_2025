@@ -34,7 +34,7 @@ export default function About() {
       className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20"
     >
       <div className="max-w-4xl mx-auto">
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-[auto_1fr] gap-8 items-start"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export default function About() {
           <div className="h-px bg-[#233554] mt-3 hidden md:block"></div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="mt-12 grid md:grid-cols-2 gap-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -80,8 +80,8 @@ export default function About() {
             {/* Skills List */}
 
             <div className="relative w-full">
-              <div className="absolute inset-0 border-2 border-[#64ffda] rounded-lg opacity-20"></div>
-              <div className="relative p-6 bg-[#112240]/50 rounded-lg">
+              <div className="absolute inset-0 border-0 border-[#64ffda] rounded-lg opacity-20"></div>
+              <div className="relative p-6 bg-[#112240]/50 rounded-lg ">
                 <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
                   {skills.map((skill) => (
                     <li
@@ -97,7 +97,7 @@ export default function About() {
           </div>
 
           {/* Profile Image */}
-          <motion.div 
+          <motion.div
             className="relative w-64 h-64 md:w-72 md:h-72 group"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
