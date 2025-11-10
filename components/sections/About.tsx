@@ -48,7 +48,7 @@ export default function About() {
           <div className="h-px bg-[#233554] mt-3 hidden md:block"></div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="mt-12 grid md:grid-cols-2 gap-8"
           initial={false}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +82,12 @@ export default function About() {
 
             <div className="relative w-full">
               <div className="absolute inset-0 border-0 border-[#64ffda] rounded-lg opacity-20"></div>
-              <div className="relative p-6 bg-[#112240]/50 rounded-lg ">
+              <div
+                style={{
+                  padding: "8px 10px",
+                }}
+                className="relative p-6 bg-[#112240]/50 rounded-lg "
+              >
                 <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
                   {skills.map((skill) => (
                     <li
@@ -95,10 +100,43 @@ export default function About() {
                 </ul>
               </div>
             </div>
+
+            {/* Education Section */}
+            <div className="relative w-full mt-6">
+              <div className="absolute inset-0 border-0 border-[#64ffda] rounded-lg opacity-20"></div>
+              <div
+                style={{
+                  padding: "10px 8px",
+                }}
+                className="relative p-6 bg-[#112240]/50 rounded-lg"
+              >
+                <h3 className="text-lg font-semibold text-[#ccd6f6] mb-4">
+                  EDUCATION:
+                </h3>
+                <div className="space-y-4 flex flex-col justify-center items-start gap-4">
+                  <div>
+                    <p className="text-[#8892b0] text-sm before:content-['➢'] before:text-[#64ffda] before:mr-2">
+                      B.Sc. in Computer Science & Engineering (Ongoing)
+                    </p>
+                    <p className="text-[#8892b0] text-xs ml-4 mt-1">
+                      Bangladesh University | Dhaka | Expected Dec-2025
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-[#8892b0] text-sm before:content-['➢'] before:text-[#64ffda] before:mr-2">
+                      Diploma in Computer Technology
+                    </p>
+                    <p className="text-[#8892b0] text-xs ml-4 mt-1">
+                      Feni Polytechnic Institute | Feni | Completed Apr-2017
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Profile Image */}
-          <motion.div 
+          <motion.div
             className="relative w-64 h-64 md:w-72 md:h-72 group"
             initial={false}
             whileInView={{ opacity: 1, scale: 1 }}

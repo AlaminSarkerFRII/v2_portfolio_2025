@@ -174,7 +174,7 @@ export default function Navbar() {
                 <a
                   href={resumePath}
                   download
-                  className="block w-full px-4 py-2 text-sm   border border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 transition-all text-center"
+                  className="block w-full px-4 py-2 text-sm border border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 transition-all text-center"
                 >
                   Resume
                 </a>

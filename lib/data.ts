@@ -46,6 +46,52 @@ export const experiences: Experience[] = [
       'Worked closely with designers to deliver responsive, pixel-perfect UIs, improving mobile engagement by 25%',
     ],
   },
+  {
+    id: '3',
+    company: 'Faizur Rahman Ideal Institute (FRII)',
+    position: 'Executive of IT Department',
+    location: 'Dhaka, Bangladesh',
+    range: 'January 2020 - September 2022',
+    url: 'https://frii.edu.bd/',
+    descriptions: [
+      'Provided support to all departments in hardware, software, and network-related issues',
+      'Configured, installed, and maintained IT systems, laptops, and workstations',
+      'Ensured data security with two-factor authentication systems and password protection',
+      'Monitored system performance to optimize speeds and costs',
+      'Collaborated with external vendors to resolve specialised IT issues',
+      'Maintained data confidentiality and prevented unauthorized information transfer between workstations',
+      'Reported anomalous behaviour such as data theft or identity mismatch',
+    ],
+  },
+  {
+    id: '4',
+    company: 'P-soft—Software Company',
+    position: 'Software Operations',
+    location: 'Dhaka, Bangladesh',
+    range: 'February 2018 - January 2020',
+    url: '#',
+    descriptions: [
+      'Managed user accounts, including adding and maintaining user profiles',
+      'Performed data entry tasks and maintained accurate records',
+      'Handled CRUD operations for Students and Teachers profiles',
+      'Conducted software installations and system maintenance',
+      'Worked with SaaS platforms and data management systems',
+    ],
+  },
+  {
+    id: '5',
+    company: 'Al Hera Coaching Center',
+    position: 'Founder',
+    location: 'Feni District, Chattogram, Bangladesh',
+    range: 'December 2015 - December 2017',
+    url: '#',
+    descriptions: [
+      'Established and managed Al Hera Coaching Center from the ground up',
+      'Oversaw teacher staff, resolving issues and ensuring a smooth academic environment',
+      'Taught Science and Math subjects, guiding students to academic success',
+      'Developed leadership and startup management skills through hands-on experience',
+    ],
+  },
 ];
 
 export const projects: Project[] = [
