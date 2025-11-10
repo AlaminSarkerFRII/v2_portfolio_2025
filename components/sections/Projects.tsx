@@ -20,7 +20,7 @@ export default function Projects() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <h2 className="text-3xl font-bold text-[#ccd6f6] font-mono whitespace-nowrap">
+          <h2 className="text-3xl font-bold text-[#ccd6f6]   whitespace-nowrap">
             <span className="text-[#64ffda]">03.</span> Some Things I&apos;ve
             Built
           </h2>
@@ -84,7 +84,7 @@ export default function Projects() {
                     {project.tech.map((tech) => (
                       <li
                         key={tech}
-                        className="text-xs text-[#8892b0] font-mono"
+                        className="text-xs text-[#8892b0]  "
                       >
                         {tech}
                       </li>
@@ -110,7 +110,7 @@ export default function Projects() {
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-[#64ffda] font-mono text-sm">
+                        <span className="text-[#64ffda]   text-sm">
                           Project Image
                         </span>
                       </div>

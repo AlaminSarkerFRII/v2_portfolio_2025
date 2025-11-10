@@ -30,7 +30,7 @@ export default function EmailSidebar() {
     >
       <a
         href="mailto:alamin.sarker4241@gmail.com"
-        className="writing-vertical text-[#8892b0] hover:text-[#64ffda] transition-colors font-mono text-sm tracking-wider hover:-translate-y-1 active:scale-95"
+        className="writing-vertical text-[#8892b0] hover:text-[#64ffda] transition-colors   text-sm tracking-wider hover:-translate-y-1 active:scale-95"
         style={{ writingMode: 'vertical-rl' }}
       >
         alamin.sarker4241@gmail.com

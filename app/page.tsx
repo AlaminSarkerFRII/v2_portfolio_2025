@@ -14,12 +14,14 @@ export default function Home() {
       <Navbar />
       <Sidebar />
       <EmailSidebar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
-      <Footer />
+      <div className="px-4 sm:px-6 md:px-10 lg:px-16">
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   );
 }

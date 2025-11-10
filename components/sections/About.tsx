@@ -42,7 +42,7 @@ export default function About() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h2 className="text-3xl font-bold text-[#ccd6f6] font-mono whitespace-nowrap">
+          <h2 className="text-3xl font-bold text-[#ccd6f6]   whitespace-nowrap">
             <span className="text-[#64ffda]">01.</span> About Me
           </h2>
           <div className="h-px bg-[#233554] mt-3 hidden md:block"></div>
@@ -87,7 +87,7 @@ export default function About() {
                   {skills.map((skill) => (
                     <li
                       key={skill}
-                      className="text-[#8892b0] font-mono text-sm before:content-['▹'] before:text-[#64ffda] before:mr-2 before:mt-1"
+                      className="text-[#8892b0]   text-sm before:content-['▹'] before:text-[#64ffda] before:mr-2 before:mt-1"
                     >
                       {skill}
                     </li>

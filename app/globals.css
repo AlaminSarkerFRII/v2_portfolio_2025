@@ -24,7 +24,7 @@
   --color-dark-slate: var(--dark-slate);
   --color-navy: var(--navy);
   --color-dark-navy: var(--dark-navy);
-  --font-mono: var(--font-geist-mono);
+  -- : var(--font-geist-mono);
 }
 
 * {

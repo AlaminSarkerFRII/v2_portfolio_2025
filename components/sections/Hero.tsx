@@ -21,14 +21,14 @@ export default function Hero() {
     >
       <div className="max-w-4xl mx-auto">
         <div className="space-y-4">
-          <p className="text-[#64ffda] font-mono text-lg">Hi, my name is</p>
+          <p className="text-[#64ffda]   text-lg">Hi, my name is</p>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-[#ccd6f6]">
+          <h1 className="text-4xl md:text-6xl font-bold uppercase bg-gradient-to-r from-[#64ffda] via-[#00bcd4] to-[#8892b0] text-transparent bg-clip-text">
             Alamin Sarker.
           </h1>
 
-          <h2 className="text-4xl md:text-6xl font-bold text-[#8892b0]">
-            I build scalable web applications.
+          <h2 className="text-2xl md:text-5xl font-bold text-[#8892b0]">
+            I turn your thoughts into visual reality.
           </h2>
 
           <p className="max-w-2xl text-[#8892b0] text-lg leading-relaxed mt-6">
@@ -43,14 +43,14 @@ export default function Hero() {
           <div className="mt-10 flex flex-wrap gap-5">
             <a
               href="#projects"
-              className="inline-flex items-center justify-center px-10 py-5 border-2 border-[#64ffda] text-[#64ffda] rounded font-mono text-base font-semibold hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-[#64ffda]/20 hover:shadow-[#64ffda]/40"
+              className="inline-flex items-center justify-center px-10 py-5 border-2 border-[#64ffda] text-[#64ffda] rounded   text-base font-semibold hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-[#64ffda]/20 hover:shadow-[#64ffda]/40"
             >
               Check out my work!
             </a>
             <a
               href={resumePath}
               download
-              className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-gradient-to-r from-[#64ffda] to-[#52d4c0] text-[#0a192f] rounded font-mono text-base font-semibold border-2 border-[#64ffda] hover:from-[#52d4c0] hover:to-[#64ffda] transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-[#64ffda]/30 hover:shadow-[#64ffda]/50"
+              className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-gradient-to-r from-[#64ffda] to-[#52d4c0] text-[#0a192f] rounded   text-base font-semibold border-2 border-[#64ffda] hover:from-[#52d4c0] hover:to-[#64ffda] transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-[#64ffda]/30 hover:shadow-[#64ffda]/50"
             >
               <Download size={20} />
               Download Resume

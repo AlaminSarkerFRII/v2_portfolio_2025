@@ -13,11 +13,10 @@ export default function Navbar() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Set mounted after initial render to avoid hydration mismatch
     startTransition(() => {
       setMounted(true);
     });
-    
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
@@ -62,27 +61,43 @@ export default function Navbar() {
         }`}
         suppressHydrationWarning
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 ">
+        <div
+          style={{
+            margin: "0 12px",
+          }}
+          className="max-w-7xl mx-auto px-6 lg:px-12"
+        >
           <div className="flex items-center justify-between gap-12 h-16">
-            {/* Logo */}
             <Link
               href="/"
-              className="text-2xl font-bold text-[#64ffda] font-mono hover:scale-105 transition-transform"
+              className="border-1 rounded-full text-2xl text-[#64ffda] hover:scale-105 transition-transform"
             >
-              <span className="text-[#64ffda]">A</span>
-              <span className="text-[#8892b0]">S</span>
+              <div
+                style={{
+                  padding: "4px",
+                }}
+              >
+                <span className="text-[#64ffda] border-r-2 border-yellow-600 group-hover:text-yellow-400 transition-colors">
+                  A
+                </span>
+                <span className="text-red-500 group-hover:text-[#64ffda] transition-colors">
+                  S
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex gap-4 items-center justify-center space-x-8 font-mono text-sm tracking-wide">
+
+            <div className="hidden md:flex gap-4 items-center justify-center space-x-8 text-sm tracking-wide">
               {navLinks.map((link, index) => {
-                const isActive = mounted && activeSection === link.href.substring(1);
+                const isActive =
+                  mounted && activeSection === link.href.substring(1);
                 return (
                   <a
                     key={link.name}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className={`relative text-sm px-2 py-1 font-mono transition-colors ${
+                    className={`relative text-sm px-2 py-1   transition-colors ${
                       isActive
                         ? "text-[#64ffda]"
                         : "text-[#8892b0] hover:text-[#64ffda]"
@@ -100,7 +115,7 @@ export default function Navbar() {
               <a
                 href={resumePath}
                 download
-                className="px-6 py-2 text-sm font-mono border border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 transition-colors"
+                className="px-6 py-2 text-sm   border border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 transition-colors"
               >
                 Resume
               </a>
@@ -121,39 +136,51 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-y-0 right-0 z-50 w-64 bg-[#112240] shadow-2xl md:hidden"
-          >
-            <div className="flex flex-col items-start p-8 space-y-6 mt-16">
-              {navLinks.map((link, index) => {
-                const isActive = activeSection === link.href.substring(1);
-                return (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
-                    className={`text-lg font-mono ${
-                      isActive ? "text-[#64ffda]" : "text-[#8892b0]"
-                    }`}
-                  >
-                    <span className="text-[#64ffda]">0{index + 1}.</span>
-                    {link.name}
-                  </a>
-                );
-              })}
-              <a
-                href={resumePath}
-                download
-                className="block w-full px-4 py-2 text-sm font-mono border border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 transition-all text-center"
-              >
-                Resume
-              </a>
-            </div>
-          </motion.div>
+          <>
+            <motion.div
+              key="overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-40 bg-[#0a192f] md:hidden"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            <motion.div
+              key="drawer"
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed inset-y-0 right-0 z-50 w-64 bg-[#112240] shadow-2xl md:hidden"
+            >
+              <div className="flex flex-col items-start p-8 space-y-6 mt-16">
+                {navLinks.map((link, index) => {
+                  const isActive = activeSection === link.href.substring(1);
+                  return (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      onClick={(e) => handleNavClick(e, link.href)}
+                      className={`text-lg   ${
+                        isActive ? "text-[#64ffda]" : "text-[#8892b0]"
+                      }`}
+                    >
+                      <span className="text-[#64ffda]">0{index + 1}.</span>
+                      {link.name}
+                    </a>
+                  );
+                })}
+                <a
+                  href={resumePath}
+                  download
+                  className="block w-full px-4 py-2 text-sm   border border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 transition-all text-center"
+                >
+                  Resume
+                </a>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>

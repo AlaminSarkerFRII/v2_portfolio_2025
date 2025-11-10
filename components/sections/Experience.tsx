@@ -18,7 +18,7 @@ export default function Experience() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h2 className="text-3xl font-bold text-[#ccd6f6] font-mono whitespace-nowrap">
+          <h2 className="text-3xl font-bold text-[#ccd6f6]   whitespace-nowrap">
             <span className="text-[#64ffda]">02.</span> Where I&apos;ve Worked
           </h2>
           <div className="h-px bg-[#233554] mt-3 hidden md:block"></div>
@@ -37,7 +37,7 @@ export default function Experience() {
               <button
                 key={exp.id}
                 onClick={() => setActiveTab(index)}
-                className={`px-4 py-2 text-sm font-mono whitespace-nowrap border-b-2 md:border-b-0 md:border-l-2 transition-colors ${
+                className={`px-4 py-2 text-sm   whitespace-nowrap border-b-2 md:border-b-0 md:border-l-2 transition-colors ${
                   activeTab === index
                     ? 'border-[#64ffda] text-[#64ffda] bg-[#112240]/50'
                     : 'border-transparent text-[#8892b0] hover:text-[#64ffda] hover:bg-[#112240]/30'
@@ -71,7 +71,7 @@ export default function Experience() {
                       <ExternalLink size={16} />
                     </a>
                   </h3>
-                  <p className="text-sm text-[#8892b0] font-mono mt-1">
+                  <p className="text-sm text-[#8892b0]   mt-1">
                     {experiences[activeTab].range}
                   </p>
                   <p className="text-sm text-[#8892b0] mt-1">
