@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown, Divide, DivideCircle, DivideSquareIcon, Download } from "lucide-react";
 import { resumePath } from "@/lib/data";
 import { useMounted } from "@/lib/hooks/useMounted";
 
@@ -40,14 +40,25 @@ export default function Hero() {
             innovative projects.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-5">
+          <div
+            style={{
+              padding: "16px 0",
+            }}
+            className="mt-10 flex flex-wrap gap-5"
+          >
             <a
+              style={{
+                padding: "4px 8px",
+              }}
               href="#projects"
               className="inline-flex items-center justify-center px-10 py-5 border-2 border-[#64ffda] text-[#64ffda] rounded   text-base font-semibold hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-[#64ffda]/20 hover:shadow-[#64ffda]/40"
             >
               Check out my work!
             </a>
             <a
+              style={{
+                padding: "4px 8px",
+              }}
               href={resumePath}
               download
               className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-gradient-to-r from-[#64ffda] to-[#52d4c0] text-[#0a192f] rounded   text-base font-semibold border-2 border-[#64ffda] hover:from-[#52d4c0] hover:to-[#64ffda] transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-[#64ffda]/30 hover:shadow-[#64ffda]/50"

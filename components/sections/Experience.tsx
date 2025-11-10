@@ -1,17 +1,21 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { experiences } from '@/lib/data';
-import { ExternalLink } from 'lucide-react';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { experiences } from "@/lib/data";
+import { ExternalLink } from "lucide-react";
 
 export default function Experience() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section id="experience" className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20" suppressHydrationWarning>
+    <section
+      id="experience"
+      className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20"
+      suppressHydrationWarning
+    >
       <div className="max-w-5xl mx-auto w-full">
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-[auto_1fr] gap-8 items-start mb-12"
           initial={false}
           whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +28,7 @@ export default function Experience() {
           <div className="h-px bg-[#233554] mt-3 hidden md:block"></div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-[200px_1fr] gap-8"
           initial={false}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,16 +36,21 @@ export default function Experience() {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           {/* Tab List */}
-          <div className="flex md:flex-col items-start gap-y-8 overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-l border-[#233554]">
+          <div
+            style={{
+              padding: "18px 0",
+            }}
+            className="flex md:flex-col items-start gap-y-8 overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-l border-[#233554]"
+          >
             {experiences.map((exp, index) => (
               <button
                 key={exp.id}
                 onClick={() => setActiveTab(index)}
-                className={`px-4 py-2 text-sm   whitespace-nowrap border-b-2 md:border-b-0 md:border-l-2 transition-colors ${
+                className={`cursor-pointer px-4 py-2 text-sm whitespace-nowrap border-b-2 md:border-b-0 md:border-l-2 transition-colors ${
                   activeTab === index
-                    ? 'border-[#64ffda] text-[#64ffda] bg-[#112240]/50'
-                    : 'border-transparent text-[#8892b0] hover:text-[#64ffda] hover:bg-[#112240]/30'
-                } ${index > 0 ? 'md:mt-4' : ''}`}
+                    ? "border-[#64ffda] text-[#64ffda] bg-[#112240]/50"
+                    : "border-transparent text-[#8892b0] hover:text-[#64ffda] hover:bg-[#112240]/30"
+                } ${index > 0 ? "md:mt-4" : ""}`}
               >
                 {exp.company}
               </button>
@@ -49,18 +58,23 @@ export default function Experience() {
           </div>
 
           {/* Tab Content */}
-          <motion.div 
-            key={activeTab} 
+          <motion.div
+            key={activeTab}
             className="transition-opacity duration-300"
             initial={false}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
           >
             {experiences[activeTab] && (
-              <div className="space-y-4">
+              <div
+                className="space-y-4"
+                style={{
+                  padding: "10px 0",
+                }}
+              >
                 <div>
                   <h3 className="text-xl font-semibold text-[#ccd6f6]">
-                    {experiences[activeTab].position}{' '}
+                    {experiences[activeTab].position}{" "}
                     <a
                       href={experiences[activeTab].url}
                       target="_blank"
@@ -96,4 +110,3 @@ export default function Experience() {
     </section>
   );
 }
-
