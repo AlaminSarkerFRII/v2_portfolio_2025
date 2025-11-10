@@ -6,6 +6,7 @@ export interface Project {
   github?: string;
   external?: string;
   image?: string;
+  images?: string[];
 }
 
 export interface Experience {

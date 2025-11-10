@@ -52,11 +52,12 @@ export const projects: Project[] = [
   {
     id: '1',
     title: 'SIDA',
-    description: 'Ongoing private project for bkash users to analyze social media data. Leading frontend development as Lead Frontend Engineer, developing and guiding junior developers throughout the full project lifecycle. Building scalable analytics dashboards with real-time data visualization and comprehensive social media insights.',
+    description: 'Ongoing private project for bkash users to analyze social media data. Leading frontend development as Lead Frontend Engineer, developing and guiding junior developers throughout the full project lifecycle. Building scalable analytics dashboards with real-time data visualization and comprehensive social media insights. I also contributed to the backend system for user authentication and authorization via an RBAC model, and implemented NLP APIs for topic modeling and sentiment analysis.',
     tech: ['React', 'Django', 'PostgreSQL', 'NLP', 'Docker', 'Nginx', 'TailwindCSS', 'antd', 'tanstack query'],
     github: '',
     external: '',
     image: '/assets/SIDA_Dashboard.png',
+    images: ['/assets/SIDA_Login_Page.png', '/assets/SIDA_Dashboard.png', '/assets/SIDA_Self_Profile_View.png', '/assets/SIDA_Users_Page.png' ],
   },
   {
     id: '2',
@@ -74,6 +75,7 @@ export const projects: Project[] = [
     github: '',
     external: 'https://joinborderguard.bgb.gov.bd/',
     image: '/assets/BGB_Banner.png',
+    images: ['/assets/BGB_Banner.png'],
   },
   {
     id: '4',
