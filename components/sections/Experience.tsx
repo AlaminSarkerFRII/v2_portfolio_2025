@@ -11,7 +11,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20"
+      className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-8"
       suppressHydrationWarning
     >
       <div className="max-w-5xl mx-auto w-full">

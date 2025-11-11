@@ -16,12 +16,12 @@ export default function Hero() {
 
   return (
     <section
-      className="min-h-screen flex items-center justify-center px-6 lg:px-12 pt-16 relative"
+      className="min-h-screen flex items-center justify-center px-6 lg:px-12 pt-8 relative"
       suppressHydrationWarning
     >
       <div className="max-w-4xl mx-auto">
         <div className="space-y-4">
-          <p className="text-[#64ffda]   text-lg">Hi, my name is</p>
+          <p className="text-[#64ffda] text-lg">Hi, my name is</p>
 
           <h1 className="text-4xl md:text-6xl font-bold uppercase bg-gradient-to-r from-[#64ffda] via-[#00bcd4] to-[#8892b0] text-transparent bg-clip-text">
             Alamin Sarker.

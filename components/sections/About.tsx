@@ -31,7 +31,7 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20"
+      className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-8"
       suppressHydrationWarning
     >
       <div className="max-w-4xl mx-auto">

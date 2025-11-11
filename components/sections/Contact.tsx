@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-20"
+      className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-4"
       suppressHydrationWarning
     >
       <div className="max-w-2xl mx-auto text-center">
@@ -52,7 +52,7 @@ export default function Contact() {
           </motion.p>
 
           <motion.div
-            className="mt-10 flex flex-wrap gap-4 justify-center"
+            className="mt-4 flex flex-wrap gap-4 justify-center"
             initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -63,7 +63,7 @@ export default function Contact() {
                 padding: "4px 8px",
               }}
               href="mailto:alamin.sarker4241@gmail.com"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-[#64ffda] text-[#64ffda] rounded   text-sm hover:bg-[#64ffda]/10 transition-colors hover:scale-105 hover:-translate-y-0.5 active:scale-95"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-[#64ffda] text-[#64ffda] rounded text-sm hover:bg-[#64ffda]/10 transition-colors hover:scale-105 hover:-translate-y-0.5 active:scale-95"
             >
               <Mail size={18} />
               Say Hello
@@ -74,7 +74,7 @@ export default function Contact() {
               }}
               href={resumePath}
               download
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#64ffda]/10 border border-[#64ffda] text-[#64ffda] rounded   text-sm hover:bg-[#64ffda]/20 transition-colors hover:scale-105 hover:-translate-y-0.5 active:scale-95"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#64ffda]/10 border border-[#64ffda] text-[#64ffda] rounded text-sm hover:bg-[#64ffda]/20 transition-colors hover:scale-105 hover:-translate-y-0.5 active:scale-95"
             >
               <Download size={18} />
               Download Resume

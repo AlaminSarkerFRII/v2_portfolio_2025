@@ -65,7 +65,7 @@ export default function Navbar() {
           style={{
             margin: "0 12px",
           }}
-          className="max-w-7xl mx-auto px-6 lg:px-12"
+          className="max-w-7xl mx-auto px-6 lg:px-8"
         >
           <div className="flex items-center justify-between gap-12 h-16">
             <Link
@@ -115,7 +115,7 @@ export default function Navbar() {
               <a
                 href={resumePath}
                 download
-                className="px-6 py-2 text-sm   border border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 transition-colors"
+                className="px-6 py-2 text-sm border border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 transition-colors"
               >
                 Resume
               </a>
